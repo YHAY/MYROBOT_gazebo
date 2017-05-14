@@ -23,9 +23,10 @@ class Controller:
   self.LeftDoor = readInfo.LeftSideReading()
   self.RightDoor = readInfo.RightSideReading()
   #example, Left =['901','902','903'...]
-  self.LeftDoorlist = self.LeftDoor.keys()
-  self.RightDoorlist = self.RightDoor.keys()
-
+  self.LeftDoorlist = sorted(self.LeftDoor.keys())
+  print 'LeftDoorlist :' , self.LeftDoorlist
+  self.RightDoorlist = sorted(self.RightDoor.keys())
+  print 'RightDoorlist :' , self.RightDoorlist
   self.angle = 0
   self.location = 'none'
   self.direction = ''

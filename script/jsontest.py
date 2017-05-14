@@ -3,10 +3,7 @@ import json
 class ReadingInfo:
  def __init__(self):
    self.LeftFILE = '/home/haei/catkin_ws/src/MYROBOT_gazebo/json/LeftData.json'
-   self.RightFILE = '/home/haei/catkin_ws/src/MYROBOT_gazebo/json/RightData.json'
-
-  
-  
+   self.RightFILE = '/home/haei/catkin_ws/src/MYROBOT_gazebo/json/RightData.json'  
  def readJson(self,filename):
    f = open(filename, 'r')
    js = json.loads(f.read())
