@@ -10,9 +10,16 @@ class ReadingInfo:
    f.close()
    return js
 
+ def magic(self, numList):
+    s = ''.join(map(str, numList))
+    return int(s)
+
  def LeftSideReading(self):
    LeftREAD = self.readJson(self.LeftFILE)
+#   LeftLists = {int(k) for(k,v) in LeftREAD.items()}
    LeftLists = LeftREAD.keys()
+   print 'LeftLists ', LeftLists 
+   print 'LeftLists ', LeftLists 
    DIC={}
    #read json then, push the value into type of Dictionary
    for strings in LeftLists :
@@ -39,4 +46,6 @@ class ReadingInfo:
 if __name__ == "__main__":
         reads=ReadingInfo()
 	print "LLLdic value :", reads.LeftSideReading()
+      
+      
 	print "RRRdic value :", reads.RightSideReading()
